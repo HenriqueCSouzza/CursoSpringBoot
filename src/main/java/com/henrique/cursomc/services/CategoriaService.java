@@ -58,6 +58,9 @@ public class CategoriaService {
 		return repo.findAll(pageRequest);
 	}
 	
+	/**
+	 * converte a classe CategoriaDTO para Categoria já instanciando e iniciando a classe 
+	 */
 	public Categoria fromDTO(CategoriaDTO objDTO) {
 		return new Categoria(objDTO.getId(),objDTO.getNome());
 		
