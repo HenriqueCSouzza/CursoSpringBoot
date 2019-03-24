@@ -40,8 +40,6 @@ public class Cliente implements Serializable {
 	@OneToMany(mappedBy="cliente")
 	private List<Pedido> pedidos = new ArrayList<>();
 	
-	
-	
 	public Cliente() {
 
 	}
@@ -52,7 +50,7 @@ public class Cliente implements Serializable {
 		this.nome = nome;
 		this.email = email;
 		this.cpfOuCnpj = cpfOuCnpj;
-		this.tipoCliente = tipoCliente.getCod();
+		this.tipoCliente =(tipoCliente==null)? null : tipoCliente.getCod();
 	}
 
 	public Integer getId() {
